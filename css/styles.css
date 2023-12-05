@@ -1,120 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Satisfy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Playpen+Sans:wght@100;200;300;400;500;600;700;800&family=Satisfy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Playpen+Sans:wght@100;200;300;400;500;600;700;800&family=Satisfy&family=Schoolbell&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Playpen+Sans:wght@100;200;300;400;500;600;700;800&family=Satisfy&family=Schoolbell&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playpen+Sans:wght@100;200;300;400;500;600;700;800&family=Satisfy&family=Schoolbell&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Comfortaa:wght@300;400;500;600;700&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Playpen+Sans:wght@100;200;300;400;500;600;700;800&family=Satisfy&family=Schoolbell&display=swap');
-/*css reset*/
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    vertical-align: baseline;
-}
-img, picture, iframe, video, figure{
-    max-width: 100%;
-    width: 100%;
-    display: block;
-    object-fit: cover;
-}
-
-:root{
-    --color_primario: #000;
-    --color_secundario: #fff;
-
-    
-}
-@media (prefers-colors-schene: dark) {
-    :root{
-        --color_primario: #c0c0c0;
-        --color_secundario: #181818;
-    }
-}
-@media (prefers_contrast: high){
-    :root{
-        --color_primario: #181818;
-        --color_secundario: #c0c0c0;
-
-    }
-}
-@media (prefers-reduced-motion: reduced){
-    *{
-        animation: none;
-        transition: none;
-
-    }
-}
-a{
-    display: block;
-}
-p a {
-    display: inline;
-}
-li{
-    list-style-type: none;
-}
-html{
-    scroll-behavior: smooth;
-}
-h1, h2, h3, h4, h5, h6, p span, a, strong, blockquote, i, b, u, em {
-    font-size: 1em;
-    font-weight: inherit;
-    font-style: inherit;
-    text-decoration: none;
-    color: inherit;
-    background-color: transparent;
-}
-blockquote:before, blockquote:after, q:before, q:after{
-    content: "";
-    content: none;
-}
-::selection{
-    background-color: var(--color_primario);
-    color: var(--color_secundario);
-}
-form, input, select, textarea, button, label{
-    font-family: inherit;
-    font-size: inherit;
-    hyphens: auto;
-    background-color: transparent;
-    display: block;
-    color: inherit;
-    appearance: none;
-}
-
-table, tr, td{
-    border-collapse: collapse;
-    border-spacing: 0 ;
-}
-svg{
-    width: 100%;
-    display: block;
-    fill: currentColor;
-}
-body{
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    min-height: 100vh;
-    font-size: 100%;
-    font-family: 'Caveat', cursive;
-    font-family: 'Playpen Sans', cursive;
-    font-family: 'Satisfy', cursive;
-    font-family: 'Schoolbell', cursive;
-    color: var(--color_primario);
-    background-color: var(--color_secundario);
-    line-height: 1.4em;
-    hyphens: auto;
-    font-smooth: always;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
 
 
-/*cabecera*/
-.header{
+
+.header {
     width: 100%;
     background-color: #282828;
     padding: 1em;
@@ -126,13 +13,14 @@ body{
 
 }
 
-.header .button{
-    
+.header .button {
+
     display: none;
+    background: transparent;
 
 }
 
-.header .svg{
+.header .svg {
     width: 2em;
     height: 2em;
     fill: #fff;
@@ -140,57 +28,62 @@ body{
 }
 
 
-.header .ul{
+.header .ul {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: center;
 }
-.header .li{ 
+
+.header .li {
     margin: 0 .8em;
 }
-.header .li:after{
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 5px;
-  bottom: -10px;
-  left: -4px;
-  transform: scaleX(0);
-  background: #3b71f9 ;
-  transform-origin: bottom right;
-  transition: transform 0.5s ease-out;
+
+.header .li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: -10px;
+    left: -4px;
+    transform: scaleX(0);
+    background: #3b71f9;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
 }
 
-.li{
+.li {
 
-  cursor: pointer;
-  position: relative;
+    cursor: pointer;
+    position: relative;
 
 
 }
-.header .li:hover:after{
+
+.header .li:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
 @media screen and (max-width:720px) {
 
-    .header .button{
+    .header .button {
         display: block;
         cursor: pointer;
 
+
     }
-    .header .nav.activo{
+
+    .header .nav.activo {
         /* display: block; */
         height: 50vh;
         pointer-events: auto;
-        
+
 
 
     }
 
-    .header .nav{
+    .header .nav {
         width: 100%;
         /* display: none; */
         height: 0;
@@ -202,39 +95,44 @@ body{
         justify-content: center;
         align-items: center;
     }
-    .header .ul{
+
+    .header .ul {
         flex-direction: column;
     }
-    .header .li{
+
+    .header .li {
         margin: 1em 0;
     }
 
-    
-}
-#spaceImg{
-   position: relative;
-   display: inline-block;
-   text-align: center;
 
 }
-.space{
+
+#spaceImg {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+}
+
+.space {
     justify-content: center;
     align-items: center;
     line-height: 2;
-    font-family: 'Satisfy', cursive;    
+    font-family: 'Satisfy', cursive;
     font-size: 60px;
 }
-.ariText{
+
+.ariText {
 
     color: #fff;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+
 }
 
-#startPage{
+#startPage {
     background: url('../multimedia/img/space-galaxy-background-generative-ai.jpg');
     background-color: #282828;
     background-blend-mode: soft-light;
@@ -248,16 +146,18 @@ body{
     clip-path: polygon(0 0, 100% 0, 100% 80%, 49% 100%, 0 80%);
     color: #fff;
 }
+
 @media screen and (max-width:720px) {
 
-    .space{
-        -webkit-box-shadow: 1px 20px 21px 0px rgba(0,0,0,0.75);
-        -webkit-box-shadow: 0px 10px 8px 0px rgba(40,40,40,1);
-        -moz-box-shadow: 0px 10px 8px 0px rgba(40,40,40,1);
-        box-shadow: 0px 10px 8px 0px rgba(40,40,40,1);
+    .space {
+        -webkit-box-shadow: 1px 20px 21px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0px 10px 8px 0px rgba(40, 40, 40, 1);
+        -moz-box-shadow: 0px 10px 8px 0px rgba(40, 40, 40, 1);
+        box-shadow: 0px 10px 8px 0px rgba(40, 40, 40, 1);
         width: 100%;
     }
-    #startPage{
+
+    #startPage {
         background: url('../multimedia/img/space-galaxy-background-generative-ai.jpg');
         background-color: #282828;
         background-blend-mode: soft-light;
@@ -268,20 +168,22 @@ body{
         align-items: center;
         height: 70vh;
         width: 100%;
-        
+
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         color: #fff;
 
     }
-    .ariText{
+
+    .ariText {
         align-items: center;
         justify-content: center;
         font-size: 40px;
     }
 
 }
-.contenedor{
-    width: 100%;
+
+.contenedor {
+    width: 95%;
     margin: 2em;
     padding: 1em;
     display: flex;
@@ -289,7 +191,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-#poema{
+
+#poema {
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -297,26 +200,33 @@ body{
     font-size: 2em;
     font-family: 'Nunito', sans-serif;
     line-height: 1.2;
-    
+
 }
-#giftPlanet{
+
+#giftPlanet {
     align-items: center;
     justify-content: center;
     padding: 3em;
-    margin: 0 auto;
     height: 70%;
     width: 50%;
 }
-#giftPlanet .gif{
-    cursor: pointer;
-    border: 2em;
-    border-radius: 3em;
-    -webkit-box-shadow: -1px -1px 31px 12px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px -1px 31px 12px rgba(0,0,0,0.75);
-    box-shadow: -1px -1px 31px 12px rgba(0,0,0,0.75);
+#giftPlanet .content{
+align-items: center;
+justify-content: center;
 
 }
-.play{
+
+#giftPlanet .gif {
+    cursor: pointer;
+    margin-left: 2.3em;
+    border-radius: 3em;
+    -webkit-box-shadow: -1px -1px 31px 12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px -1px 31px 12px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px -1px 31px 12px rgba(0, 0, 0, 0.75);
+
+}
+
+.play {
     width: 100%;
     font-family: 'Comfortaa', sans-serif;
     font-size: 22px;
@@ -326,8 +236,9 @@ body{
     display: flex;
     padding: 3em;
 }
+
 @media screen and (max-width:720px) {
-    .contenedor{
+    .contenedor {
         margin: 0;
         padding: 0;
         display: block;
@@ -336,7 +247,8 @@ body{
         align-items: center;
         width: 100%;
     }
-    #poema{
+
+    #poema {
         text-align: center;
         justify-content: center;
         align-items: center;
@@ -344,25 +256,29 @@ body{
         font-size: 120%;
         font-family: 'Nunito', sans-serif;
         line-height: 1.2;
-        
+
     }
-    #giftPlanet{
+
+    #giftPlanet {
         align-items: center;
         justify-content: center;
         padding: 3em;
         margin: 0 auto;
         width: 400px;
     }
-    #giftPlanet .gif{
+
+    #giftPlanet .gif {
         cursor: pointer;
+        margin: 0 auto;
         border: 2em;
         border-radius: 3em;
-        -webkit-box-shadow: -1px -1px 31px 12px rgba(0,0,0,0.75);
-        -moz-box-shadow: -1px -1px 31px 12px rgba(0,0,0,0.75);
-        box-shadow: -1px -1px 31px 12px rgba(0,0,0,0.75);
-    
+        -webkit-box-shadow: -1px -1px 31px 12px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -1px -1px 31px 12px rgba(0, 0, 0, 0.75);
+        box-shadow: -1px -1px 31px 12px rgba(0, 0, 0, 0.75);
+
     }
-    .play{
+
+    .play {
         width: 100%;
         font-family: 'Comfortaa', sans-serif;
         font-size: 18px;
@@ -373,13 +289,15 @@ body{
         padding: 3em;
     }
 }
-#separador{
+
+#separador {
     width: 100%;
     height: 10px;
     background-color: #ffff91;
     margin-bottom: 50px;
 }
-.gracioso{
+
+.gracioso {
     margin: 0 auto;
     justify-content: center;
     display: flex;
@@ -393,49 +311,53 @@ body{
     font-size: 2em;
     line-height: 1;
     /* background-color: #965dba; */
-    
+
     color: #000;
     height: 100vh;
-   
-    
+
+
 }
 
-.gracioso{
+.gracioso {
     position: relative;
     display: inline-block;
     overflow: hidden;
     transition: 0.2s;
 
 }
-.gracioso:hover{
+
+.gracioso:hover {
     color: #fff;
     background-color: #a945c7;
     box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
-    
+
 }
-.gracioso .tittle{
+
+.gracioso .tittle {
     padding: 1em;
     margin: 1em;
 }
-.dog{
 
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+.dog {
+
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
     border-radius: 20px;
     height: 60vh;
     width: 30vw;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    width:250px;
-    height:250px;
-    object-fit:cover;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
     clip-path: path('M213.1,6.7c-32.4-14.4-73.7,0-88.1,30.6C110.6,4.9,67.5-9.5,36.9,6.7C2.8,22.9-13.4,62.4,13.5,110.9 C33.3,145.1,67.5,170.3,125,217c59.3-46.7,93.5-71.9,111.5-106.1C263.4,64.2,247.2,22.9,213.1,6.7z');
-    margin:0 auto;
+    margin: 0 auto;
 }
-@media screen and (max-width:720px){
-    .gracioso{
+
+@media screen and (max-width:720px) {
+    .gracioso {
 
         margin: 0 auto;
         justify-content: space-between;
@@ -450,49 +372,52 @@ body{
         text-align: center;
         font-family: 'Nunito', sans-serif;
         font-size: 12px;
-        line-height: 1; 
+        line-height: 1;
         color: #000;
         position: relative;
         height: 50vh;
         width: 80%;
         overflow: hidden;
         transition: 0.2s;
-       
-        
+
+
     }
-    .gracioso:hover{
+
+    .gracioso:hover {
         color: #000000;
         background-color: transparent;
         box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
-        
-    }
-    
-  
-    .dog{
 
-        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        border-radius: 20px;
-        
-       
-        width:250px;
-        height:250px;
-        object-fit:cover;
-        clip-path: path('M213.1,6.7c-32.4-14.4-73.7,0-88.1,30.6C110.6,4.9,67.5-9.5,36.9,6.7C2.8,22.9-13.4,62.4,13.5,110.9 C33.3,145.1,67.5,170.3,125,217c59.3-46.7,93.5-71.9,111.5-106.1C263.4,64.2,247.2,22.9,213.1,6.7z');
-        margin:0 auto; 
-         
     }
-    .gracioso .tittle{
+
+
+    .dog {
+
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        border-radius: 20px;
+
+
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        clip-path: path('M213.1,6.7c-32.4-14.4-73.7,0-88.1,30.6C110.6,4.9,67.5-9.5,36.9,6.7C2.8,22.9-13.4,62.4,13.5,110.9 C33.3,145.1,67.5,170.3,125,217c59.3-46.7,93.5-71.9,111.5-106.1C263.4,64.2,247.2,22.9,213.1,6.7z');
+        margin: 0 auto;
+
+    }
+
+    .gracioso .tittle {
         font-size: 15px;
     }
 
 }
-.loveFinal{
+
+.loveFinal {
     width: 100%;
-    background:url('../multimedia/img/starsBackground.jpg');
+    background: url('../multimedia/img/starsBackground.jpg');
     background-color: #282828;
-    background-blend-mode: soft-light ;
+    background-blend-mode: soft-light;
     display: flex;
     justify-content: space-around;
     color: #fff;
@@ -500,37 +425,41 @@ body{
     font-size: 30px;
 
 }
-#cats{
+
+#cats {
     height: 40vh;
     width: 20vw;
     padding: 30px;
     border-radius: 50px;
 
 }
-@media screen and (max-width:720px){
-    .loveFinal{
+
+@media screen and (max-width:720px) {
+    .loveFinal {
         height: 35vh;
         justify-content: space-around;
         font-size: 18px;
-       
 
-    
-    }  
-    #cats{
+
+
+    }
+
+    #cats {
 
         height: 250px;
         width: 250px;
         padding: 30px;
         border-radius: 10em;
-    
+
     }
 }
-.footer{
+
+.footer {
     margin-top: 10px;
     background-color: #181818;
     color: #fff;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     padding: 15px;
     align-items: center;
     justify-content: space-between;
@@ -538,7 +467,8 @@ body{
     font-size: 40px;
 
 }
-.footer .icons{
+
+.footer .icons {
     justify-content: space-around;
     display: flex;
     flex-flow: row nowrap;
@@ -552,10 +482,3 @@ body{
     font-size: 25px;
 
 }
-
-
-
-
-
-
-
